@@ -1,0 +1,12 @@
+.input-control {
+    min-width: 400px;
+}
+
+.search-button {
+    width: 64px;
+    background: #c12020;
+}
+
+.search-icon {
+    color: #fff;
+}

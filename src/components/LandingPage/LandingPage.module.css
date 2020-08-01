@@ -2,4 +2,15 @@
     width: 180px;
     height: 100px;
     margin: 50px 0;
+    filter: invert(100%);
+}
+
+.landing {
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.582),
+            rgba(0, 0, 0, 0.582)
+        ),
+        url(../../assets/hero.jpg) no-repeat center center/cover;
+    height: 100vh;
 }
