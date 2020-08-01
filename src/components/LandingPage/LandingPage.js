@@ -8,8 +8,8 @@ import Suggestions from '../Suggestions/Suggestions';
 const LandingPage = () => {
     return (
         <div className={styles.landing}>
+            <TopNav />
             <div className={styles['search-area']}>
-                <TopNav />
                 <img src={logo} className={styles.logo} alt="logo" />
                 <SearchBar />
                 <Suggestions />

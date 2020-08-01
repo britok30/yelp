@@ -13,6 +13,7 @@
         ),
         url(../../assets/hero.jpg) no-repeat center center/cover;
     height: 100vh;
+    justify-content: center;
 }
 
 .search-area {
