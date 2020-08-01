@@ -1,0 +1,10 @@
+.suggestions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.suggestion {
+    font-size: 0.8rem;
+    margin-left: 4px;
+}

@@ -2,6 +2,10 @@
     --element-spacing: 1.5rem;
 }
 
+span {
+    color: #fff;
+}
+
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -20,4 +24,8 @@
 
 .right > * {
     margin-left: var(--element-spacing);
+}
+
+.signup-button {
+    color: #c12020;
 }
