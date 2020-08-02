@@ -4,6 +4,7 @@ import logo from '../../assets/logo-foursquare.svg';
 import styles from './LandingPage.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Suggestions from '../Suggestions/Suggestions';
+import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
@@ -11,10 +12,15 @@ const LandingPage = () => {
         <div className={styles.landing}>
             {/* <TopNav /> */}
             <div className={styles['search-area']}>
-                <Link to="/">
-                    <img src={logo} className={styles.logo} alt="logo" />
-                </Link>
-                <SearchBar medium />
+                <Fade bottom duration={3000} distance={'1rem'}>
+                    <Link to="/">
+                        <img src={logo} className={styles.logo} alt="logo" />
+                    </Link>
+                </Fade>
+                <Fade bottom duration={3000} distance={'1rem'} delay={1000}>
+                    <SearchBar medium />
+                </Fade>
+
                 <Suggestions />
             </div>
         </div>
