@@ -4,4 +4,15 @@
 
 .result-image {
     border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    margin-right: 1rem;
+}
+
+.business-info {
+    min-width: 400px;
+}
+
+.contact-info {
+    font-size: 0.8rem;
 }

@@ -1,0 +1,16 @@
+.ratings {
+    display: flex;
+    align-items: center;
+}
+
+.ratings > * {
+    margin-right: 1rem;
+}
+
+.icon {
+    color: #000;
+}
+
+.reviews {
+    font-size: 0.8rem;
+}
