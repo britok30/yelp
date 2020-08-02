@@ -6,7 +6,6 @@ import SearchBar from '../SearchBar/SearchBar';
 import Suggestions from '../Suggestions/Suggestions';
 import { Link } from 'react-router-dom';
 
-
 const LandingPage = () => {
     return (
         <div className={styles.landing}>
@@ -15,7 +14,7 @@ const LandingPage = () => {
                 <Link to="/">
                     <img src={logo} className={styles.logo} alt="logo" />
                 </Link>
-                <SearchBar />
+                <SearchBar medium />
                 <Suggestions />
             </div>
         </div>

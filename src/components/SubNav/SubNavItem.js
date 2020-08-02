@@ -27,11 +27,7 @@ const SubNavItem = ({ label, icon, showRightBorder }) => {
                 <div className="dropdown-menu" id="dropdown-menu4" role="menu">
                     <div className="dropdown-content">
                         <div className="dropdown-item">
-                            <p>
-                                You can insert{' '}
-                                <strong>any type of content</strong> within the
-                                dropdown menu.
-                            </p>
+                            <p>Findbooks {label}</p>
                         </div>
                     </div>
                 </div>

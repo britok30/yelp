@@ -12,11 +12,12 @@ const Navbar = () => {
             </Link>
 
             <SearchBar />
+            
             <button className={`button is-small ${styles['nav-button']}`}>
-                Sign In
+                Log In
             </button>
             <button className={`button is-small ${styles['nav-button']}`}>
-                Register
+                Sign Up
             </button>
         </div>
     );
