@@ -3,11 +3,14 @@ import styles from './Summary.module.css';
 
 const Summary = () => {
     return (
-        <div className={styles['search-summary']}>
-            <h1 className={styles.search}>
-                {' '}
-                <strong>burgers</strong> in berlin
-            </h1>
+        <div className={styles.container}>
+            <div className={styles['search-summary']}>
+                <h1 className={`subtitle ${styles.search}`}>
+                    {' '}
+                    <strong>Best Burgers in Berlin</strong>
+                </h1>
+                <p>Showing 1-20 out of 543</p>
+            </div>
         </div>
     );
 };

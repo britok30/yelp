@@ -10,3 +10,7 @@
 .search-icon {
     color: #fff;
 }
+
+.shadow {
+    box-shadow: 5px 5px 10px #d6d6d6;
+}

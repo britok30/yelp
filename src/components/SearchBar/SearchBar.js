@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './SearchBar.module.css';
 
-const SearchBar = ({ medium }) => {
+const SearchBar = ({ medium, shadow }) => {
     const isMedium = medium ? 'is-medium' : '';
+    const isShadow = shadow ? styles.shadow : '';
+    
     return (
-        <div>
+        <div className={isShadow}>
             <div className="field has-addons">
                 <p className="control">
                     <button className={`button is-static ${isMedium}`}>

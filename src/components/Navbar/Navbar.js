@@ -11,8 +11,8 @@ const Navbar = () => {
                 <img className={styles.logo} src={logo} alt="logo" />
             </Link>
 
-            <SearchBar />
-            
+            <SearchBar shadow />
+
             <button className={`button is-small ${styles['nav-button']}`}>
                 Log In
             </button>
