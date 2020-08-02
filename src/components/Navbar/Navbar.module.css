@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    background: #c12020;
+    padding: 0.3rem 0;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    filter: invert(100%);
+}

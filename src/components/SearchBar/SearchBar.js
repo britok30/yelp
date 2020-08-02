@@ -6,29 +6,29 @@ const SearchBar = () => {
         <div>
             <div className="field has-addons">
                 <p className="control">
-                    <button className="button is-static is-medium">
+                    <button className="button is-static is-small">
                         Search
                     </button>
                 </p>
                 <p className="control">
                     <input
-                        className={`input is-medium ${styles['input-control']}`}
+                        className={`input is-small ${styles['input-control']}`}
                         type="text"
                         placeholder="burgers, barbers, spas, handymen..."
                     />
                 </p>
                 <p className="control">
-                    <button class="button is-static is-medium">NEAR</button>
+                    <button class="button is-static is-small">NEAR</button>
                 </p>
                 <p className="control">
                     <input
-                        className={`input is-medium ${styles['input-control']}`}
+                        className={`input is-small ${styles['input-control']}`}
                         type="text"
                         placeholder="Where"
                     />
                 </p>
                 <button
-                    className={`button is-medium ${styles['search-button']}`}
+                    className={`button is-small ${styles['search-button']}`}
                 >
                     <i className={`fas fa-search ${styles['search-icon']}`}></i>
                 </button>

@@ -4,13 +4,17 @@ import logo from '../../assets/logo-foursquare.svg';
 import styles from './LandingPage.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Suggestions from '../Suggestions/Suggestions';
+import { Link } from 'react-router-dom';
+
 
 const LandingPage = () => {
     return (
         <div className={styles.landing}>
-            <TopNav />
+            {/* <TopNav /> */}
             <div className={styles['search-area']}>
-                <img src={logo} className={styles.logo} alt="logo" />
+                <Link to="/">
+                    <img src={logo} className={styles.logo} alt="logo" />
+                </Link>
                 <SearchBar />
                 <Suggestions />
             </div>
