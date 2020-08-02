@@ -9,7 +9,9 @@ const Summary = () => {
                     {' '}
                     <strong>Best Burgers in Berlin</strong>
                 </h1>
-                <p>Showing 1-20 out of 543</p>
+                <p className={styles.results}>
+                    <strong>All Results</strong>
+                </p>
             </div>
         </div>
     );

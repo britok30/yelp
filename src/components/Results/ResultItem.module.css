@@ -1,0 +1,7 @@
+.search-result {
+    display: flex;
+}
+
+.result-image {
+    border-radius: 5px;
+}
