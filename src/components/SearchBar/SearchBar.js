@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SearchBar.module.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div>
             <div className="field has-addons">

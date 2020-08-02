@@ -12,8 +12,12 @@ const Navbar = () => {
             </Link>
 
             <SearchBar />
-            <button className="button">Sign In</button>
-            <button className="button">Register</button>
+            <button className={`button is-small ${styles['nav-button']}`}>
+                Sign In
+            </button>
+            <button className={`button is-small ${styles['nav-button']}`}>
+                Register
+            </button>
         </div>
     );
 };
