@@ -1,0 +1,8 @@
+.label,
+.icon {
+    color: #000;
+}
+
+.right-border {
+    border-right: 2px solid rgb(230, 230, 230);
+}
