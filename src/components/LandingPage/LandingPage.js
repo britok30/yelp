@@ -6,14 +6,15 @@ import SearchBar from '../SearchBar/SearchBar';
 import Suggestions from '../Suggestions/Suggestions';
 import Fade from 'react-reveal/Fade';
 import { Link, useHistory } from 'react-router-dom';
+import Yelp from '../api/Yelp';
 
 const LandingPage = () => {
     const history = useHistory();
 
-    const search = (term, location) => {
+    const search = async (term, location) => {
         const urlEncodedTerm = encodeURI(term);
         const urlEncodedLocation = encodeURI(location);
-
+        
         history.push(
             `/search?find_desc=${urlEncodedTerm}&find_loc=${urlEncodedLocation}`
         );
