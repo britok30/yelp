@@ -5,11 +5,10 @@ import styles from './LandingPage.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Suggestions from '../Suggestions/Suggestions';
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-router-dom';
-import useReactRouter from 'use-react-router';
+import { Link, useHistory } from 'react-router-dom';
 
 const LandingPage = () => {
-    const { history } = useReactRouter();
+    const history = useHistory();
 
     const search = (term, location) => {
         const urlEncodedTerm = encodeURI(term);

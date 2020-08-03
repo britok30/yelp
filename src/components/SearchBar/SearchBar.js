@@ -10,9 +10,13 @@ const SearchBar = ({ medium, shadow, search }) => {
 
     const onHandleSubmit = (e) => {
         if (typeof search === 'function') {
-            search(term, location);
+            if (!term || !location) {
+                alert('Please enter a search & location');
+            } else {
+                search(term, location);
+                return;
+            }
         }
-        e.preventDefault();
     };
 
     return (
