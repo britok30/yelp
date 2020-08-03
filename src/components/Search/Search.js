@@ -3,11 +3,12 @@ import Navbar from '../Navbar/Navbar';
 import SubNav from '../SubNav/SubNav';
 import Summary from '../Summary/Summary';
 import Results from '../Results/Results';
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useBusinessSearch } from '../api/useBusinessSearch';
 
 const Search = () => {
     const location = useLocation();
+    const history = useHistory();
     const params = new URLSearchParams(location.search);
     const term = params.get('find_desc');
     const locationParam = params.get('find_loc');
@@ -19,7 +20,12 @@ const Search = () => {
     ] = useBusinessSearch(term, locationParam);
 
     const search = (term, location) => {
-        setSearchParams({term, location});
+        const encodedTerm = encodeURI(term);
+        const encodedLocation = encodeURI(location);
+        history.push(
+            `/search?find_desc=${encodedTerm}&find_loc=${encodedLocation}`
+        );
+        setSearchParams({ term, location });
     };
 
     return (
