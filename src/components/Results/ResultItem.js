@@ -40,7 +40,7 @@ const ResultItem = ({ business }) => {
             </div>
             <div className={styles['contact-info']}>
                 <p>{business.phone}</p>
-                <p>{addressLines}</p>
+                <div>{addressLines}</div>
             </div>
         </div>
     );
