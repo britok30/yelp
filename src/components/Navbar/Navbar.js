@@ -4,14 +4,14 @@ import logo from '../../assets/logo-foursquare.svg';
 import SearchBar from '../SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ term, location }) => {
     return (
         <div className={styles.navbar}>
             <Link to="/">
                 <img className={styles.logo} src={logo} alt="logo" />
             </Link>
 
-            <SearchBar shadow />
+            <SearchBar shadow term={term} location={location} />
 
             <button className={`button is-small ${styles['nav-button']}`}>
                 Log In

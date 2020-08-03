@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import styles from './SearchBar.module.css';
 
-const SearchBar = ({ medium, shadow, search }) => {
-    const [term, setTerm] = useState('');
-    const [location, setLocation] = useState('');
+const SearchBar = (props) => {
+    const [term, setTerm] = useState(props.term || '');
+    const [location, setLocation] = useState(props.location || '');
 
-    const isMedium = medium ? 'is-medium' : '';
-    const isShadow = shadow ? styles.shadow : '';
+    const isMedium = props.medium ? 'is-medium' : '';
+    const isShadow = props.shadow ? styles.shadow : '';
 
     const onHandleSubmit = (e) => {
-        if (typeof search === 'function') {
+        if (typeof props.search === 'function') {
             if (!term || !location) {
                 alert('Please enter a search & location');
             } else {
-                search(term, location);
+                props.search(term, location);
                 return;
             }
         }

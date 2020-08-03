@@ -13,7 +13,7 @@ const Search = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar term={term} location={locationParam} />
             <SubNav />
             <Summary term={term} location={locationParam} />
             <Results />
