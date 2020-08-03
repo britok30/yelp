@@ -19,6 +19,10 @@ const Search = () => {
         setSearchParams,
     ] = useBusinessSearch(term, locationParam);
 
+    if (!term || !locationParam) {
+        history.push('/');
+    }
+
     const search = (term, location) => {
         const encodedTerm = encodeURI(term);
         const encodedLocation = encodeURI(location);
@@ -29,7 +33,7 @@ const Search = () => {
     };
 
     return (
-        <div>
+        <div className="column is-desktop">
             <Navbar term={term} location={locationParam} search={search} />
             <SubNav />
             <Summary
