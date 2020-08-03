@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import styles from './SearchBar.module.css';
 
-
-
 const SearchBar = (props) => {
     const [term, setTerm] = useState(props.term || '');
     const [location, setLocation] = useState(props.location || '');
@@ -12,13 +10,10 @@ const SearchBar = (props) => {
 
     const onHandleSubmit = (e) => {
         if (typeof props.search === 'function') {
-            if (!term || !location) {
-                alert('Please enter a search & location');
-            } else {
-                props.search(term, location);
-                return;
-            }
+            props.search(term, location);
         }
+
+        e.preventDefault();
     };
 
     return (

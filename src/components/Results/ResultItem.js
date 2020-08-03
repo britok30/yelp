@@ -2,24 +2,37 @@ import React from 'react';
 import Ratings from '../Ratings/Ratings';
 import styles from './ResultItem.module.css';
 
-const ResultItem = () => {
+const ResultItem = ({ business }) => {
+    if (!business) {
+        return <div />;
+    }
+
     return (
         <div className={styles['search-result']}>
             <img
                 className={styles['result-image']}
-                src="https://via.placeholder.com/200"
+                src={business.image_url}
                 alt="business-img"
             />
             <div className={styles['business-info']}>
-                <h2 className="subtitle">Burger Place</h2>
-                <Ratings />
+                <h2 className="subtitle">{business.name}</h2>
+                <Ratings business={business} />
                 <p>
-                    $$ <span className="tag">Burger</span>{' '}
-                    <span className="tag">Fast Food</span>
+                    $${' '}
+                    <span className="tag">
+                        {business.categories[0]
+                            ? business.categories[0].title
+                            : null}
+                    </span>{' '}
+                    <span className="tag">
+                        {business.categories[1]
+                            ? business.categories[1].title
+                            : null}
+                    </span>
                 </p>
             </div>
             <div className={styles['contact-info']}>
-                <p>+1 (786)-343-3434</p>
+                <p>{business.phone}</p>
                 <p>123 Main St</p>
                 <p>32092, Berlin</p>
             </div>
