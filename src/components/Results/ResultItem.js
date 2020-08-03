@@ -35,9 +35,8 @@ const ResultItem = ({ business }) => {
                     reviewCount={business.review_count}
                     rating={business.rating}
                 />
-                <p>
-                    {business.price} {tags}
-                </p>
+                <div>{business.price}</div>
+                <div>{tags}</div>
             </div>
             <div className={styles['contact-info']}>
                 <p>{business.phone}</p>

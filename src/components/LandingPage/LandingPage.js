@@ -21,7 +21,7 @@ const LandingPage = () => {
 
     return (
         <div className={styles.landing}>
-            {/* <TopNav /> */}
+            <TopNav />
             <div className={styles['search-area']}>
                 <Fade bottom duration={3000} distance={'1rem'}>
                     <Link to="/">

@@ -22,7 +22,12 @@ const Search = () => {
         <div>
             <Navbar term={term} location={locationParam} />
             <SubNav />
-            <Summary term={term} location={locationParam} />
+            <Summary
+                term={term}
+                location={locationParam}
+                amountResults={amountResults}
+                shownResults={businesses ? businesses.length : 0}
+            />
             <Results businesses={businesses} />
         </div>
     );
