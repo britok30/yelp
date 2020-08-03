@@ -7,6 +7,21 @@ const ResultItem = ({ business }) => {
         return <div />;
     }
 
+    const tags = business.categories.map((category) => (
+        <span
+            className={`tag ${styles['business-tag']}`}
+            key={business.id + category.title}
+        >
+            {category.title}
+        </span>
+    ));
+
+    const addressLines = business.location.display_address.map(
+        (addressLine) => {
+            return <p key={business.id + addressLine}>{addressLine}</p>;
+        }
+    );
+
     return (
         <div className={styles['search-result']}>
             <img
@@ -16,25 +31,17 @@ const ResultItem = ({ business }) => {
             />
             <div className={styles['business-info']}>
                 <h2 className="subtitle">{business.name}</h2>
-                <Ratings business={business} />
+                <Ratings
+                    reviewCount={business.review_count}
+                    rating={business.rating}
+                />
                 <p>
-                    $${' '}
-                    <span className="tag">
-                        {business.categories[0]
-                            ? business.categories[0].title
-                            : null}
-                    </span>{' '}
-                    <span className="tag">
-                        {business.categories[1]
-                            ? business.categories[1].title
-                            : null}
-                    </span>
+                    {business.price} {tags}
                 </p>
             </div>
             <div className={styles['contact-info']}>
                 <p>{business.phone}</p>
-                <p>123 Main St</p>
-                <p>32092, Berlin</p>
+                <p>{addressLines}</p>
             </div>
         </div>
     );

@@ -18,3 +18,7 @@
 .contact-info {
     font-size: 0.8rem;
 }
+
+:global(.tag).business-tag {
+    margin-right: 1rem;
+}
